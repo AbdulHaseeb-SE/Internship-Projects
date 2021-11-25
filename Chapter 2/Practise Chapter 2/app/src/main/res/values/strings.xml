@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Chapter2</string>
-    <string name="ChooseImageButton">Choose Image</string>
-    <string name="ImageDescription">ImageDisplayHere</string>
-    <string name="SendMessage">Send Message</string>
-    <string name="hintEditText">Write Some Message</string>
-</resources>
