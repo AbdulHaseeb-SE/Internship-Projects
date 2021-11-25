@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView_CallPerson"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+    <TextView
+        android:id="@+id/textView_CallerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imageView_CallPerson"
+        app:layout_constraintTop_toTopOf="@+id/imageView_CallPerson" />
+
+    <ImageView
+        android:id="@+id/imageView_CallType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_CallPerson"
+        app:layout_constraintStart_toStartOf="@+id/textView_CallerName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CallerName"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_alt_24" />
+
+    <TextView
+        android:id="@+id/textView_CallTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_CallType"
+        app:layout_constraintStart_toEndOf="@+id/imageView_CallType"
+        app:layout_constraintTop_toTopOf="@+id/imageView_CallType" />
+
+    <ImageView
+        android:id="@+id/imageView_PlaceNewCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_call_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
