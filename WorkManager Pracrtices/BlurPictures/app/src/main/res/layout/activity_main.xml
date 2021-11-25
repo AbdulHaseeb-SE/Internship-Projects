@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="380dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Select Blurring Level"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_BlurLevels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radioButton_LittleBlurred"
+            android:tag="little"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A Little Blurred"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_MoreBlurred"
+            android:tag="more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More Blurred"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_MostBlurred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="most"
+            android:text="The Most Blurred"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_LoadImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Load Image"
+        app:layout_constraintEnd_toStartOf="@+id/btn_StartBlurring"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_BlurLevels" />
+
+    <Button
+        android:id="@+id/btn_StartBlurring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Blurring"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_LoadImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_LoadImage"
+        app:layout_constraintTop_toTopOf="@+id/btn_LoadImage" />
+
+    <TextView
+        android:id="@+id/Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_StartBlurring"
+        app:layout_constraintStart_toEndOf="@+id/btn_LoadImage"
+        app:layout_constraintTop_toBottomOf="@+id/btn_LoadImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
